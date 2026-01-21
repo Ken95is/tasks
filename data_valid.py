@@ -4,7 +4,7 @@ records = [
     {"id": 3, "email": "test@mail.com", "age": None},
 ]
 
-age_val = {i['id']:i['age'] // 2 for i in records if isinstance (i['age'], int) and i['age'] >= 18}
+age_val = {i['id']:i['age'] for i in records if isinstance (i['age'], int) and i['age'] >= 18}
 print(age_val)
 
 email_val = {i['id']:i['email'] for i in records if isinstance(i["email"], str) and '@' in i["email"]}
