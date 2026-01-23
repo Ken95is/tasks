@@ -16,7 +16,7 @@ else:
 count = 0
 for i in range(len(matrix)): # len = 3, range = (0, 3)
     print(matrix[i][i]) # matrix[i][i] = matrix[0][0] и далее увеличивается [1][1], [2][2]
-    count += matrix[i][i] # count = matrix[i][i] который = 1 потом + 5 + 9 
+    count += matrix[i][i] # count = matrix[i][i] который = 1 потом + 5 + 9 в обоих индексах идет с 0 и увеличивается на 1
 print(count)
 main_diagonal_sum = (count, )
 print(main_diagonal_sum)
