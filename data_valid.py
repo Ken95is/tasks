@@ -4,11 +4,14 @@ records = [
     {"id": 3, "email": "test@mail.com", "age": None},
 ]
 
-age_val = {i['id']:i['age'] for i in records if isinstance (i['age'], int) and i['age'] >= 18}
-print(age_val)
+# age_val = {i['id']:i['age'] for i in records if isinstance (i['age'], int) and i['age'] >= 18}
+# print(age_val)
 
-email_val = {i['id']:i['email'] for i in records if isinstance(i["email"], str) and '@' in i["email"]}
-print(email_val)
+# email_val = {i['id']:i['email'] for i in records if isinstance(i["email"], str) and '@' in i["email"]}
+# print(email_val)
 
-final_val = [{'id': i['id'], 'email': i['email'], 'age': i['age']} for i in records if (isinstance(i.get('age'), int) and i["age"] >= 18 and isinstance(i.get('email'), str) and '@' in i["email"])]
+# final_val = [{'id': i['id'], 'email': i['email'], 'age': i['age']} for i in records if (isinstance(i.get('age'), int) and i["age"] >= 18 and isinstance(i.get('email'), str) and '@' in i["email"] and '.' in i["email"])]
+# print(final_val)
+
+final_val = [i['id'] for i in records if (isinstance(i.get('age'), int) and i["age"] >= 18 and isinstance(i.get('email'), str) and '@' in i["email"] and '.' in i["email"])]
 print(final_val)
