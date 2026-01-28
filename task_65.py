@@ -13,7 +13,9 @@ for user in users:
     age = user['age']
     print(age)
 
-    if email not in result or age > result[email]['age']:
-        result[email] = user
+    if email not in result or age > result[email]['age']: # result[email] подставляет значение переменной email
+        result[email] = {"email": email, "age": age}
 
-print(result)
+unique_users = list(result.values())
+print(unique_users)
+# print(result)
